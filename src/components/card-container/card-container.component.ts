@@ -72,17 +72,24 @@ return false;
 openBook(book : any){
   let formats : Object = book.formats;
   let format : Array<string> = Object.keys(formats);
-  console.log(format);
+  let href : string = null;
 for(let i = 0;i<format.length;i++){
   console.log(formats[format[i].split(';')[0]]);
   if(format[i].split(';')[0].includes('html')){
-    window.location.href = formats[format[i]].toString();
+    href= formats[format[i]].toString();
     break;
   }
   else if(format[i].split(';')[0].includes('plain')){
-    window.location.href = formats[format[i]].toString();
+    href = formats[format[i]].toString();
     break;
   }
+ 
+}
+if(href != null){
+  window.location.href = href;
+}
+else{
+  alert('No viewable version available');
 }
 
 
@@ -90,11 +97,11 @@ for(let i = 0;i<format.length;i++){
 
 getMoreBooks(){
   this.scrollable = document.documentElement.scrollHeight - window.innerHeight;
-if(window.scrollY  >= this.scrollable - 1  ){
+if(window.scrollY  >= this.scrollable - 10  ){
 let timeout = setTimeout(()=> {
 clearTimeout(timeout);
 this.getBooks();
-},2000);
+},300);
    }
   
 

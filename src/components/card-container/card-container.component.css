@@ -8,17 +8,18 @@
    
     width: 100%;
    margin-top: 2%;
-    background-color: #F8F7FF;
-    height: 100%;
+   /* background-color: #F8F7FF; */
+   height: 100%;
+ 
     
  
 }
 
 
-
 .contain :is(h3,input){
 /* position: absolute; */
 margin-left: 8.5%;
+
 }
 img{
     /* margin:auto; */
@@ -34,6 +35,11 @@ img{
     box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
      margin: 50px 50px 0px 50px;
    
+   }
+
+   .Rectangle:hover{
+    
+       cursor: pointer;
    }
     p{
     font-family: 'Montserrat';
@@ -76,4 +82,7 @@ input{
         margin-left: 20%;
         }
 
+}
+i:hover{
+    cursor: pointer;
 }

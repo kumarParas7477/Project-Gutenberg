@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GutenBerg"
+    }
+  },
+  "defaultProject": "GutenBerg",
+  "cli": {
+    "analytics": "bb6d99cb-20f7-4379-a1be-a065a1c76c33"
+  }
 }

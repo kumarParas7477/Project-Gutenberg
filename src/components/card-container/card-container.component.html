@@ -1,0 +1,20 @@
+<div class="contain">
+<h3><i [routerLink]="['/']" routerLinkActive="router-link-active"   style="color: hsl(243, 75%, 62%)" class='fas fa-arrow-left'></i> {{topic}}</h3>
+<!-- <div class="wrapper"> -->
+<input   [(ngModel)]="searched" type="text"  placeholder="Search" >
+<!-- </div> -->
+
+<div class="card-container">
+    
+ 
+    <div (click)="openBook(book)" class="Rectangle" *ngFor="let book of filterBooksArray"  >
+        <img  src="{{book.formats['image/jpeg']}}"  />
+        <p><strong>{{getBookTitle(book.title)}}</strong>  <br>  {{getAuthorName(book.authors)}}</p>
+        <!-- <p>
+           
+        </p> -->
+    </div>
+    
+</div>
+
+</div>

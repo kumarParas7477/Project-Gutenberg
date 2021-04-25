@@ -1,0 +1,6 @@
+<div class="cardContainer ">
+<div class="card" *ngFor="let type of bookTypes">
+<p>{{type.display}}</p> <i [routerLink]="['/genre',type.display]" style="color: #5E56E7" class='fas fa-arrow-right'></i>
+
+</div>
+</div>
